@@ -15,14 +15,71 @@ namespace cn\asarea\core;
  */
 class View {
 
+    public $title;
+    public $layoutFile;
+
+    private $metas = [ ];
+
+    private $cssFiles = [ ];
+
+    private $jsFiles = [ ];
+
+    public function registerMeta($name, $content) {
+        $this->metas [$name] = $content;
+    }
+
+    public function registerJSFile($jsFile) {
+        $this->jsFiles [] = $jsFile;
+    }
+
+    public function registerCSSFile($cssFile) {
+        $this->cssFiles [] = $cssFile;
+    }
+
+    private function getHeaderTags() {
+        $rtn = '';
+        foreach ( $this->metas as $name => $content ) {
+            $rtn .= "<meta name='{$name}' content='{$content}'>\n";
+        }
+        foreach ( $this->cssFiles as $cssFile ) {
+            $rtn .= "<link rel='stylesheet' type='text/css' href='{$cssFile}'>\n";
+        }
+        return $rtn;
+    }
+
+    private function getBodyEndHtml() {
+        $rtn = '';
+        foreach ( $this->jsFiles as $jsFile ) {
+            $rtn .= "<script type='text/javascript' src='{$jsFile}'></script>\n";
+        }
+        return $rtn;
+    }
+
     /**
-     * 渲染某个view file
+     * 渲染某个view，并自动套用layout
      *
      * @param string $viewFile view文件的绝对地址
      * @param array $variables
      * @return string
      */
-    public static function renderFile($viewFile, $variables = array()) {
+    public function render($viewFile, $variables = []) {
+        $content = $this->renderFile( $viewFile, $variables );
+        if( !empty( $this->layoutFile ) ) {
+            $content = $this->renderFile( $this->layoutFile, [ 
+                'content' => $content 
+            ] );
+        }
+        return $content;
+    }
+
+    /**
+     * 渲染某个 file
+     *
+     * @param string $viewFile view文件的绝对地址
+     * @param array $variables
+     * @return string
+     */
+    private function renderFile($viewFile, $variables = []) {
         ob_start();
         ob_implicit_flush( false );
         
