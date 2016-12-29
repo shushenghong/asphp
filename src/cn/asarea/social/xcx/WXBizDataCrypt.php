@@ -1,5 +1,4 @@
-﻿﻿<?php
-
+<?php
 namespace cn\asarea\social\xcx;
 
 class WXBizDataCrypt
@@ -63,4 +62,4 @@ class WXBizDataCrypt
 	}
 
 }
-
+?>

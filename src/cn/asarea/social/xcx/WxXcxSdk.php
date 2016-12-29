@@ -30,7 +30,6 @@ class WxXcxSdk extends BaseSocial {
     public function getSessionKey($code) {
         $response = $this->callAPI("https://api.weixin.qq.com/sns/jscode2session?appid={$this->appId}&secret={$this->appSecret}&js_code={$code}&grant_type=authorization_code");
         $response = json_decode( $response, true );
-        var_export($response);
         if( isset( $response['errcode'] ) && $response['errcode'] ) {
             return FALSE;
         }
@@ -49,7 +48,6 @@ class WxXcxSdk extends BaseSocial {
     public function decrptData($encryptedData, $iv, $sessionKey) {
         $pc = new WXBizDataCrypt($this->appId, $sessionKey);
         $errCode = $pc->decryptData($encryptedData, $iv, $data );
-        return $data;
         
         if ($errCode == ErrorCode::$OK) {
             return $data;

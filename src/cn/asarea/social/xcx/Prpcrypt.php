@@ -62,3 +62,4 @@ class Prpcrypt
         return array(0, $result);
     }
 }
+?>

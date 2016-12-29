@@ -1,4 +1,4 @@
-﻿﻿<?php
+<?php
 namespace cn\asarea\social\xcx;
 /**
  * error code 说明.
