@@ -87,7 +87,7 @@ class DateUtil {
     /**
      * 智能格式化，返回如 刚刚 1分钟前 半小时前等
      *
-     * @param int $timestamp
+     * @param int $timestamp 距离1970秒
      * @param string $format
      * @return string
      */
@@ -104,6 +104,11 @@ class DateUtil {
         else if( $gap > 0 && $gap < $day ) {
             $multiper = floor( $gap / $hour );
             return "{$multiper}小时前";
+        }
+        else if ($gap > 0 && $gap < 2 * $day) {
+            return "昨天";
+        } else if ($gap > 0 && $gap < 3 * $day) {
+            return "前天";
         }
         return date( $format, $timestamp );
     }

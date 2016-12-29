@@ -9,7 +9,7 @@
  * 功能。合并的主要目的是便于拷贝，只要复制这个库文件即可，而不用拷贝一
  * 大堆文件。详细文档请阅读 {@link:http://www.xunsearch.com/doc/php/}
  * 
- * 切勿手动修改本文件！生成时间：2013/12/11 15:18:21 
+ * 切勿手动修改本文件！生成时间：2015/04/02 21:20:56 
  *
  * @author hightman
  * @link http://www.xunsearch.com/
@@ -17,177 +17,177 @@
  * @license http://www.xunsearch.com/license/
  * @version $Id$
  */
-define('CMD_NONE',	0);
-define('CMD_DEFAULT',	CMD_NONE);
-define('CMD_PROTOCOL',	20110707);
-define('CMD_USE',	1);
-define('CMD_HELLO',	1);
-define('CMD_DEBUG',	2);
-define('CMD_TIMEOUT',	3);
-define('CMD_QUIT',	4);
-define('CMD_INDEX_SET_DB',	32);
-define('CMD_INDEX_GET_DB',	33);
-define('CMD_INDEX_SUBMIT',	34);
-define('CMD_INDEX_REMOVE',	35);
-define('CMD_INDEX_EXDATA',	36);
-define('CMD_INDEX_CLEAN_DB',	37);
-define('CMD_DELETE_PROJECT',	38);
-define('CMD_INDEX_COMMIT',	39);
-define('CMD_INDEX_REBUILD',	40);
-define('CMD_FLUSH_LOGGING',	41);
-define('CMD_INDEX_SYNONYMS',	42);
-define('CMD_INDEX_USER_DICT',	43);
-define('CMD_SEARCH_DB_TOTAL',	64);
-define('CMD_SEARCH_GET_TOTAL',	65);
-define('CMD_SEARCH_GET_RESULT',	66);
-define('CMD_SEARCH_SET_DB',	CMD_INDEX_SET_DB);
-define('CMD_SEARCH_GET_DB',	CMD_INDEX_GET_DB);
-define('CMD_SEARCH_ADD_DB',	68);
-define('CMD_SEARCH_FINISH',	69);
-define('CMD_SEARCH_DRAW_TPOOL',	70);
-define('CMD_SEARCH_ADD_LOG',	71);
-define('CMD_SEARCH_GET_SYNONYMS',	72);
-define('CMD_SEARCH_SCWS_GET',	73);
-define('CMD_QUERY_GET_STRING',	96);
-define('CMD_QUERY_GET_TERMS',	97);
-define('CMD_QUERY_GET_CORRECTED',	98);
-define('CMD_QUERY_GET_EXPANDED',	99);
-define('CMD_OK',	128);
-define('CMD_ERR',	129);
-define('CMD_SEARCH_RESULT_DOC',	140);
-define('CMD_SEARCH_RESULT_FIELD',	141);
-define('CMD_SEARCH_RESULT_FACETS',	142);
-define('CMD_SEARCH_RESULT_MATCHED',	143);
-define('CMD_DOC_TERM',	160);
-define('CMD_DOC_VALUE',	161);
-define('CMD_DOC_INDEX',	162);
-define('CMD_INDEX_REQUEST',	163);
-define('CMD_IMPORT_HEADER',	191);
-define('CMD_SEARCH_SET_SORT',	192);
-define('CMD_SEARCH_SET_CUT',	193);
-define('CMD_SEARCH_SET_NUMERIC',	194);
-define('CMD_SEARCH_SET_COLLAPSE',	195);
-define('CMD_SEARCH_KEEPALIVE',	196);
-define('CMD_SEARCH_SET_FACETS',	197);
-define('CMD_SEARCH_SCWS_SET',	198);
-define('CMD_SEARCH_SET_CUTOFF',	199);
-define('CMD_SEARCH_SET_MISC',	200);
-define('CMD_QUERY_INIT',	224);
-define('CMD_QUERY_PARSE',	225);
-define('CMD_QUERY_TERM',	226);
-define('CMD_QUERY_RANGEPROC',	227);
-define('CMD_QUERY_RANGE',	228);
-define('CMD_QUERY_VALCMP',	229);
-define('CMD_QUERY_PREFIX',	230);
-define('CMD_QUERY_PARSEFLAG',	231);
-define('CMD_SORT_TYPE_RELEVANCE',	0);
-define('CMD_SORT_TYPE_DOCID',	1);
-define('CMD_SORT_TYPE_VALUE',	2);
-define('CMD_SORT_TYPE_MULTI',	3);
-define('CMD_SORT_TYPE_MASK',	0x3f);
-define('CMD_SORT_FLAG_RELEVANCE',	0x40);
-define('CMD_SORT_FLAG_ASCENDING',	0x80);
-define('CMD_QUERY_OP_AND',	0);
-define('CMD_QUERY_OP_OR',	1);
-define('CMD_QUERY_OP_AND_NOT',	2);
-define('CMD_QUERY_OP_XOR',	3);
-define('CMD_QUERY_OP_AND_MAYBE',	4);
-define('CMD_QUERY_OP_FILTER',	5);
-define('CMD_RANGE_PROC_STRING',	0);
-define('CMD_RANGE_PROC_DATE',	1);
-define('CMD_RANGE_PROC_NUMBER',	2);
-define('CMD_VALCMP_LE',	0);
-define('CMD_VALCMP_GE',	1);
-define('CMD_PARSE_FLAG_BOOLEAN',	1);
-define('CMD_PARSE_FLAG_PHRASE',	2);
-define('CMD_PARSE_FLAG_LOVEHATE',	4);
-define('CMD_PARSE_FLAG_BOOLEAN_ANY_CASE',	8);
-define('CMD_PARSE_FLAG_WILDCARD',	16);
-define('CMD_PARSE_FLAG_PURE_NOT',	32);
-define('CMD_PARSE_FLAG_PARTIAL',	64);
-define('CMD_PARSE_FLAG_SPELLING_CORRECTION',	128);
-define('CMD_PARSE_FLAG_SYNONYM',	256);
-define('CMD_PARSE_FLAG_AUTO_SYNONYMS',	512);
-define('CMD_PARSE_FLAG_AUTO_MULTIWORD_SYNONYMS',	1536);
-define('CMD_PREFIX_NORMAL',	0);
-define('CMD_PREFIX_BOOLEAN',	1);
-define('CMD_INDEX_WEIGHT_MASK',	0x3f);
-define('CMD_INDEX_FLAG_WITHPOS',	0x40);
-define('CMD_INDEX_FLAG_SAVEVALUE',	0x80);
-define('CMD_INDEX_FLAG_CHECKSTEM',	0x80);
-define('CMD_VALUE_FLAG_NUMERIC',	0x80);
-define('CMD_INDEX_REQUEST_ADD',	0);
-define('CMD_INDEX_REQUEST_UPDATE',	1);
-define('CMD_INDEX_SYNONYMS_ADD',	0);
-define('CMD_INDEX_SYNONYMS_DEL',	1);
-define('CMD_SEARCH_MISC_SYN_SCALE',	1);
-define('CMD_SEARCH_MISC_MATCHED_TERM',	2);
-define('CMD_SCWS_GET_VERSION',	1);
-define('CMD_SCWS_GET_RESULT',	2);
-define('CMD_SCWS_GET_TOPS',	3);
-define('CMD_SCWS_HAS_WORD',	4);
-define('CMD_SCWS_GET_MULTI',	5);
-define('CMD_SCWS_SET_IGNORE',	50);
-define('CMD_SCWS_SET_MULTI',	51);
-define('CMD_SCWS_SET_DUALITY',	52);
-define('CMD_SCWS_SET_DICT',	53);
-define('CMD_SCWS_ADD_DICT',	54);
-define('CMD_ERR_UNKNOWN',	600);
-define('CMD_ERR_NOPROJECT',	401);
-define('CMD_ERR_TOOLONG',	402);
-define('CMD_ERR_INVALIDCHAR',	403);
-define('CMD_ERR_EMPTY',	404);
-define('CMD_ERR_NOACTION',	405);
-define('CMD_ERR_RUNNING',	406);
-define('CMD_ERR_REBUILDING',	407);
-define('CMD_ERR_WRONGPLACE',	450);
-define('CMD_ERR_WRONGFORMAT',	451);
-define('CMD_ERR_EMPTYQUERY',	452);
-define('CMD_ERR_TIMEOUT',	501);
-define('CMD_ERR_IOERR',	502);
-define('CMD_ERR_NOMEM',	503);
-define('CMD_ERR_BUSY',	504);
-define('CMD_ERR_UNIMP',	505);
-define('CMD_ERR_NODB',	506);
-define('CMD_ERR_DBLOCKED',	507);
-define('CMD_ERR_CREATE_HOME',	508);
-define('CMD_ERR_INVALID_HOME',	509);
-define('CMD_ERR_REMOVE_HOME',	510);
-define('CMD_ERR_REMOVE_DB',	511);
-define('CMD_ERR_STAT',	512);
-define('CMD_ERR_OPEN_FILE',	513);
-define('CMD_ERR_TASK_CANCELED',	514);
-define('CMD_ERR_XAPIAN',	515);
-define('CMD_OK_INFO',	200);
-define('CMD_OK_PROJECT',	201);
-define('CMD_OK_QUERY_STRING',	202);
-define('CMD_OK_DB_TOTAL',	203);
-define('CMD_OK_QUERY_TERMS',	204);
-define('CMD_OK_QUERY_CORRECTED',	205);
-define('CMD_OK_SEARCH_TOTAL',	206);
-define('CMD_OK_RESULT_BEGIN',	CMD_OK_SEARCH_TOTAL);
-define('CMD_OK_RESULT_END',	207);
-define('CMD_OK_TIMEOUT_SET',	208);
-define('CMD_OK_FINISHED',	209);
-define('CMD_OK_LOGGED',	210);
-define('CMD_OK_RQST_FINISHED',	250);
-define('CMD_OK_DB_CHANGED',	251);
-define('CMD_OK_DB_INFO',	252);
-define('CMD_OK_DB_CLEAN',	253);
-define('CMD_OK_PROJECT_ADD',	254);
-define('CMD_OK_PROJECT_DEL',	255);
-define('CMD_OK_DB_COMMITED',	256);
-define('CMD_OK_DB_REBUILD',	257);
-define('CMD_OK_LOG_FLUSHED',	258);
-define('CMD_OK_DICT_SAVED',	259);
-define('CMD_OK_RESULT_SYNONYMS',	280);
-define('CMD_OK_SCWS_RESULT',	290);
-define('CMD_OK_SCWS_TOPS',	291);
-define('PACKAGE_BUGREPORT',	"http://www.xunsearch.com/bugs");
-define('PACKAGE_NAME',	"xunsearch");
-define('PACKAGE_TARNAME',	"xunsearch");
-define('PACKAGE_URL',	"");
-define('PACKAGE_VERSION',	"1.4.8");
+define('XS_CMD_NONE',	0);
+define('XS_CMD_DEFAULT',	XS_CMD_NONE);
+define('XS_CMD_PROTOCOL',	20110707);
+define('XS_CMD_USE',	1);
+define('XS_CMD_HELLO',	1);
+define('XS_CMD_DEBUG',	2);
+define('XS_CMD_TIMEOUT',	3);
+define('XS_CMD_QUIT',	4);
+define('XS_CMD_INDEX_SET_DB',	32);
+define('XS_CMD_INDEX_GET_DB',	33);
+define('XS_CMD_INDEX_SUBMIT',	34);
+define('XS_CMD_INDEX_REMOVE',	35);
+define('XS_CMD_INDEX_EXDATA',	36);
+define('XS_CMD_INDEX_CLEAN_DB',	37);
+define('XS_CMD_DELETE_PROJECT',	38);
+define('XS_CMD_INDEX_COMMIT',	39);
+define('XS_CMD_INDEX_REBUILD',	40);
+define('XS_CMD_FLUSH_LOGGING',	41);
+define('XS_CMD_INDEX_SYNONYMS',	42);
+define('XS_CMD_INDEX_USER_DICT',	43);
+define('XS_CMD_SEARCH_DB_TOTAL',	64);
+define('XS_CMD_SEARCH_GET_TOTAL',	65);
+define('XS_CMD_SEARCH_GET_RESULT',	66);
+define('XS_CMD_SEARCH_SET_DB',	XS_CMD_INDEX_SET_DB);
+define('XS_CMD_SEARCH_GET_DB',	XS_CMD_INDEX_GET_DB);
+define('XS_CMD_SEARCH_ADD_DB',	68);
+define('XS_CMD_SEARCH_FINISH',	69);
+define('XS_CMD_SEARCH_DRAW_TPOOL',	70);
+define('XS_CMD_SEARCH_ADD_LOG',	71);
+define('XS_CMD_SEARCH_GET_SYNONYMS',	72);
+define('XS_CMD_SEARCH_SCWS_GET',	73);
+define('XS_CMD_QUERY_GET_STRING',	96);
+define('XS_CMD_QUERY_GET_TERMS',	97);
+define('XS_CMD_QUERY_GET_CORRECTED',	98);
+define('XS_CMD_QUERY_GET_EXPANDED',	99);
+define('XS_CMD_OK',	128);
+define('XS_CMD_ERR',	129);
+define('XS_CMD_SEARCH_RESULT_DOC',	140);
+define('XS_CMD_SEARCH_RESULT_FIELD',	141);
+define('XS_CMD_SEARCH_RESULT_FACETS',	142);
+define('XS_CMD_SEARCH_RESULT_MATCHED',	143);
+define('XS_CMD_DOC_TERM',	160);
+define('XS_CMD_DOC_VALUE',	161);
+define('XS_CMD_DOC_INDEX',	162);
+define('XS_CMD_INDEX_REQUEST',	163);
+define('XS_CMD_IMPORT_HEADER',	191);
+define('XS_CMD_SEARCH_SET_SORT',	192);
+define('XS_CMD_SEARCH_SET_CUT',	193);
+define('XS_CMD_SEARCH_SET_NUMERIC',	194);
+define('XS_CMD_SEARCH_SET_COLLAPSE',	195);
+define('XS_CMD_SEARCH_KEEPALIVE',	196);
+define('XS_CMD_SEARCH_SET_FACETS',	197);
+define('XS_CMD_SEARCH_SCWS_SET',	198);
+define('XS_CMD_SEARCH_SET_CUTOFF',	199);
+define('XS_CMD_SEARCH_SET_MISC',	200);
+define('XS_CMD_QUERY_INIT',	224);
+define('XS_CMD_QUERY_PARSE',	225);
+define('XS_CMD_QUERY_TERM',	226);
+define('XS_CMD_QUERY_RANGEPROC',	227);
+define('XS_CMD_QUERY_RANGE',	228);
+define('XS_CMD_QUERY_VALCMP',	229);
+define('XS_CMD_QUERY_PREFIX',	230);
+define('XS_CMD_QUERY_PARSEFLAG',	231);
+define('XS_CMD_SORT_TYPE_RELEVANCE',	0);
+define('XS_CMD_SORT_TYPE_DOCID',	1);
+define('XS_CMD_SORT_TYPE_VALUE',	2);
+define('XS_CMD_SORT_TYPE_MULTI',	3);
+define('XS_CMD_SORT_TYPE_MASK',	0x3f);
+define('XS_CMD_SORT_FLAG_RELEVANCE',	0x40);
+define('XS_CMD_SORT_FLAG_ASCENDING',	0x80);
+define('XS_CMD_QUERY_OP_AND',	0);
+define('XS_CMD_QUERY_OP_OR',	1);
+define('XS_CMD_QUERY_OP_AND_NOT',	2);
+define('XS_CMD_QUERY_OP_XOR',	3);
+define('XS_CMD_QUERY_OP_AND_MAYBE',	4);
+define('XS_CMD_QUERY_OP_FILTER',	5);
+define('XS_CMD_RANGE_PROC_STRING',	0);
+define('XS_CMD_RANGE_PROC_DATE',	1);
+define('XS_CMD_RANGE_PROC_NUMBER',	2);
+define('XS_CMD_VALCMP_LE',	0);
+define('XS_CMD_VALCMP_GE',	1);
+define('XS_CMD_PARSE_FLAG_BOOLEAN',	1);
+define('XS_CMD_PARSE_FLAG_PHRASE',	2);
+define('XS_CMD_PARSE_FLAG_LOVEHATE',	4);
+define('XS_CMD_PARSE_FLAG_BOOLEAN_ANY_CASE',	8);
+define('XS_CMD_PARSE_FLAG_WILDCARD',	16);
+define('XS_CMD_PARSE_FLAG_PURE_NOT',	32);
+define('XS_CMD_PARSE_FLAG_PARTIAL',	64);
+define('XS_CMD_PARSE_FLAG_SPELLING_CORRECTION',	128);
+define('XS_CMD_PARSE_FLAG_SYNONYM',	256);
+define('XS_CMD_PARSE_FLAG_AUTO_SYNONYMS',	512);
+define('XS_CMD_PARSE_FLAG_AUTO_MULTIWORD_SYNONYMS',	1536);
+define('XS_CMD_PREFIX_NORMAL',	0);
+define('XS_CMD_PREFIX_BOOLEAN',	1);
+define('XS_CMD_INDEX_WEIGHT_MASK',	0x3f);
+define('XS_CMD_INDEX_FLAG_WITHPOS',	0x40);
+define('XS_CMD_INDEX_FLAG_SAVEVALUE',	0x80);
+define('XS_CMD_INDEX_FLAG_CHECKSTEM',	0x80);
+define('XS_CMD_VALUE_FLAG_NUMERIC',	0x80);
+define('XS_CMD_INDEX_REQUEST_ADD',	0);
+define('XS_CMD_INDEX_REQUEST_UPDATE',	1);
+define('XS_CMD_INDEX_SYNONYMS_ADD',	0);
+define('XS_CMD_INDEX_SYNONYMS_DEL',	1);
+define('XS_CMD_SEARCH_MISC_SYN_SCALE',	1);
+define('XS_CMD_SEARCH_MISC_MATCHED_TERM',	2);
+define('XS_CMD_SCWS_GET_VERSION',	1);
+define('XS_CMD_SCWS_GET_RESULT',	2);
+define('XS_CMD_SCWS_GET_TOPS',	3);
+define('XS_CMD_SCWS_HAS_WORD',	4);
+define('XS_CMD_SCWS_GET_MULTI',	5);
+define('XS_CMD_SCWS_SET_IGNORE',	50);
+define('XS_CMD_SCWS_SET_MULTI',	51);
+define('XS_CMD_SCWS_SET_DUALITY',	52);
+define('XS_CMD_SCWS_SET_DICT',	53);
+define('XS_CMD_SCWS_ADD_DICT',	54);
+define('XS_CMD_ERR_UNKNOWN',	600);
+define('XS_CMD_ERR_NOPROJECT',	401);
+define('XS_CMD_ERR_TOOLONG',	402);
+define('XS_CMD_ERR_INVALIDCHAR',	403);
+define('XS_CMD_ERR_EMPTY',	404);
+define('XS_CMD_ERR_NOACTION',	405);
+define('XS_CMD_ERR_RUNNING',	406);
+define('XS_CMD_ERR_REBUILDING',	407);
+define('XS_CMD_ERR_WRONGPLACE',	450);
+define('XS_CMD_ERR_WRONGFORMAT',	451);
+define('XS_CMD_ERR_EMPTYQUERY',	452);
+define('XS_CMD_ERR_TIMEOUT',	501);
+define('XS_CMD_ERR_IOERR',	502);
+define('XS_CMD_ERR_NOMEM',	503);
+define('XS_CMD_ERR_BUSY',	504);
+define('XS_CMD_ERR_UNIMP',	505);
+define('XS_CMD_ERR_NODB',	506);
+define('XS_CMD_ERR_DBLOCKED',	507);
+define('XS_CMD_ERR_CREATE_HOME',	508);
+define('XS_CMD_ERR_INVALID_HOME',	509);
+define('XS_CMD_ERR_REMOVE_HOME',	510);
+define('XS_CMD_ERR_REMOVE_DB',	511);
+define('XS_CMD_ERR_STAT',	512);
+define('XS_CMD_ERR_OPEN_FILE',	513);
+define('XS_CMD_ERR_TASK_CANCELED',	514);
+define('XS_CMD_ERR_XAPIAN',	515);
+define('XS_CMD_OK_INFO',	200);
+define('XS_CMD_OK_PROJECT',	201);
+define('XS_CMD_OK_QUERY_STRING',	202);
+define('XS_CMD_OK_DB_TOTAL',	203);
+define('XS_CMD_OK_QUERY_TERMS',	204);
+define('XS_CMD_OK_QUERY_CORRECTED',	205);
+define('XS_CMD_OK_SEARCH_TOTAL',	206);
+define('XS_CMD_OK_RESULT_BEGIN',	XS_CMD_OK_SEARCH_TOTAL);
+define('XS_CMD_OK_RESULT_END',	207);
+define('XS_CMD_OK_TIMEOUT_SET',	208);
+define('XS_CMD_OK_FINISHED',	209);
+define('XS_CMD_OK_LOGGED',	210);
+define('XS_CMD_OK_RQST_FINISHED',	250);
+define('XS_CMD_OK_DB_CHANGED',	251);
+define('XS_CMD_OK_DB_INFO',	252);
+define('XS_CMD_OK_DB_CLEAN',	253);
+define('XS_CMD_OK_PROJECT_ADD',	254);
+define('XS_CMD_OK_PROJECT_DEL',	255);
+define('XS_CMD_OK_DB_COMMITED',	256);
+define('XS_CMD_OK_DB_REBUILD',	257);
+define('XS_CMD_OK_LOG_FLUSHED',	258);
+define('XS_CMD_OK_DICT_SAVED',	259);
+define('XS_CMD_OK_RESULT_SYNONYMS',	280);
+define('XS_CMD_OK_SCWS_RESULT',	290);
+define('XS_CMD_OK_SCWS_TOPS',	291);
+define('XS_PACKAGE_BUGREPORT',	"http://www.xunsearch.com/bugs");
+define('XS_PACKAGE_NAME',	"xunsearch");
+define('XS_PACKAGE_TARNAME',	"xunsearch");
+define('XS_PACKAGE_URL',	"");
+define('XS_PACKAGE_VERSION',	"1.4.9");
 define('XS_LIB_ROOT', dirname(__FILE__));
 class XSException extends Exception
 {
@@ -293,7 +293,11 @@ class XS extends XSComponent
 	public function __construct($file)
 	{
 		if (strlen($file) < 255 && !is_file($file)) {
-			$file2 = XS_LIB_ROOT . '/../app/' . $file . '.ini';
+			$appRoot = getenv('XS_APP_ROOT');
+			if ($appRoot === false) {
+				$appRoot = defined('XS_APP_ROOT') ? XS_APP_ROOT : XS_LIB_ROOT . '/../app';
+			}
+			$file2 = $appRoot . '/' . $file . '.ini';
 			if (is_file($file2)) {
 				$file = $file2;
 			}
@@ -1083,7 +1087,7 @@ class XSIndex extends XSServer
 		self::$_adds[] = $srv;
 		return $srv;
 	}
-	public function execCommand($cmd, $res_arg = CMD_NONE, $res_cmd = CMD_OK)
+	public function execCommand($cmd, $res_arg = XS_CMD_NONE, $res_cmd = XS_CMD_OK)
 	{
 		$res = parent::execCommand($cmd, $res_arg, $res_cmd);
 		foreach (self::$_adds as $srv) {
@@ -1093,7 +1097,7 @@ class XSIndex extends XSServer
 	}
 	public function clean()
 	{
-		$this->execCommand(CMD_INDEX_CLEAN_DB, CMD_OK_DB_CLEAN);
+		$this->execCommand(XS_CMD_INDEX_CLEAN_DB, XS_CMD_OK_DB_CLEAN);
 		return $this;
 	}
 	public function add(XSDocument $doc)
@@ -1110,52 +1114,52 @@ class XSIndex extends XSServer
 		if ($key === null || $key === '') {
 			throw new XSException('Missing value of primary key (FIELD:' . $fid . ')');
 		}
-		$cmd = new XSCommand(CMD_INDEX_REQUEST, CMD_INDEX_REQUEST_ADD);
+		$cmd = new XSCommand(XS_CMD_INDEX_REQUEST, XS_CMD_INDEX_REQUEST_ADD);
 		if ($add !== true) {
-			$cmd->arg1 = CMD_INDEX_REQUEST_UPDATE;
+			$cmd->arg1 = XS_CMD_INDEX_REQUEST_UPDATE;
 			$cmd->arg2 = $fid->vno;
 			$cmd->buf = $key;
 		}
 		$cmds = array($cmd);
 		foreach ($this->xs->getAllFields() as $field) /* @var $field XSFieldMeta */ {
 			if (($value = $doc->f($field)) !== null) {
-				$varg = $field->isNumeric() ? CMD_VALUE_FLAG_NUMERIC : 0;
+				$varg = $field->isNumeric() ? XS_CMD_VALUE_FLAG_NUMERIC : 0;
 				$value = $field->val($value);
 				if (!$field->hasCustomTokenizer()) {
-					$wdf = $field->weight | ($field->withPos() ? CMD_INDEX_FLAG_WITHPOS : 0);
+					$wdf = $field->weight | ($field->withPos() ? XS_CMD_INDEX_FLAG_WITHPOS : 0);
 					if ($field->hasIndexMixed()) {
-						$cmds[] = new XSCommand(CMD_DOC_INDEX, $wdf, XSFieldScheme::MIXED_VNO, $value);
+						$cmds[] = new XSCommand(XS_CMD_DOC_INDEX, $wdf, XSFieldScheme::MIXED_VNO, $value);
 					}
 					if ($field->hasIndexSelf()) {
-						$wdf |= $field->isNumeric() ? 0 : CMD_INDEX_FLAG_SAVEVALUE;
-						$cmds[] = new XSCommand(CMD_DOC_INDEX, $wdf, $field->vno, $value);
+						$wdf |= $field->isNumeric() ? 0 : XS_CMD_INDEX_FLAG_SAVEVALUE;
+						$cmds[] = new XSCommand(XS_CMD_DOC_INDEX, $wdf, $field->vno, $value);
 					}
 					if (!$field->hasIndexSelf() || $field->isNumeric()) {
-						$cmds[] = new XSCommand(CMD_DOC_VALUE, $varg, $field->vno, $value);
+						$cmds[] = new XSCommand(XS_CMD_DOC_VALUE, $varg, $field->vno, $value);
 					}
 				} else {
 					if ($field->hasIndex()) {
 						$terms = $field->getCustomTokenizer()->getTokens($value, $doc);
 						if ($field->hasIndexSelf()) {
-							$wdf = $field->isBoolIndex() ? 1 : ($field->weight | CMD_INDEX_FLAG_CHECKSTEM);
+							$wdf = $field->isBoolIndex() ? 1 : ($field->weight | XS_CMD_INDEX_FLAG_CHECKSTEM);
 							foreach ($terms as $term) {
 								if (strlen($term) > 200) {
 									continue;
 								}
 								$term = strtolower($term);
-								$cmds[] = new XSCommand(CMD_DOC_TERM, $wdf, $field->vno, $term);
+								$cmds[] = new XSCommand(XS_CMD_DOC_TERM, $wdf, $field->vno, $term);
 							}
 						}
 						if ($field->hasIndexMixed()) {
 							$mtext = implode(' ', $terms);
-							$cmds[] = new XSCommand(CMD_DOC_INDEX, $field->weight, XSFieldScheme::MIXED_VNO, $mtext);
+							$cmds[] = new XSCommand(XS_CMD_DOC_INDEX, $field->weight, XSFieldScheme::MIXED_VNO, $mtext);
 						}
 					}
-					$cmds[] = new XSCommand(CMD_DOC_VALUE, $varg, $field->vno, $value);
+					$cmds[] = new XSCommand(XS_CMD_DOC_VALUE, $varg, $field->vno, $value);
 				}
 			}
 			if (($terms = $doc->getAddTerms($field)) !== null) {
-				$wdf1 = $field->isBoolIndex() ? 0 : CMD_INDEX_FLAG_CHECKSTEM;
+				$wdf1 = $field->isBoolIndex() ? 0 : XS_CMD_INDEX_FLAG_CHECKSTEM;
 				foreach ($terms as $term => $wdf) {
 					$term = strtolower($term);
 					if (strlen($term) > 200) {
@@ -1163,37 +1167,37 @@ class XSIndex extends XSServer
 					}
 					$wdf2 = $field->isBoolIndex() ? 1 : $wdf * $field->weight;
 					while ($wdf2 > XSFieldMeta::MAX_WDF) {
-						$cmds[] = new XSCommand(CMD_DOC_TERM, $wdf1 | XSFieldMeta::MAX_WDF, $field->vno, $term);
+						$cmds[] = new XSCommand(XS_CMD_DOC_TERM, $wdf1 | XSFieldMeta::MAX_WDF, $field->vno, $term);
 						$wdf2 -= XSFieldMeta::MAX_WDF;
 					}
-					$cmds[] = new XSCommand(CMD_DOC_TERM, $wdf1 | $wdf2, $field->vno, $term);
+					$cmds[] = new XSCommand(XS_CMD_DOC_TERM, $wdf1 | $wdf2, $field->vno, $term);
 				}
 			}
 			if (($text = $doc->getAddIndex($field)) !== null) {
 				if (!$field->hasCustomTokenizer()) {
-					$wdf = $field->weight | ($field->withPos() ? CMD_INDEX_FLAG_WITHPOS : 0);
-					$cmds[] = new XSCommand(CMD_DOC_INDEX, $wdf, $field->vno, $text);
+					$wdf = $field->weight | ($field->withPos() ? XS_CMD_INDEX_FLAG_WITHPOS : 0);
+					$cmds[] = new XSCommand(XS_CMD_DOC_INDEX, $wdf, $field->vno, $text);
 				} else {
-					$wdf = $field->isBoolIndex() ? 1 : ($field->weight | CMD_INDEX_FLAG_CHECKSTEM);
+					$wdf = $field->isBoolIndex() ? 1 : ($field->weight | XS_CMD_INDEX_FLAG_CHECKSTEM);
 					$terms = $field->getCustomTokenizer()->getTokens($text, $doc);
 					foreach ($terms as $term) {
 						if (strlen($term) > 200) {
 							continue;
 						}
 						$term = strtolower($term);
-						$cmds[] = new XSCommand(CMD_DOC_TERM, $wdf, $field->vno, $term);
+						$cmds[] = new XSCommand(XS_CMD_DOC_TERM, $wdf, $field->vno, $term);
 					}
 				}
 			}
 		}
-		$cmds[] = new XSCommand(CMD_INDEX_SUBMIT);
+		$cmds[] = new XSCommand(XS_CMD_INDEX_SUBMIT);
 		if ($this->_bufSize > 0) {
 			$this->appendBuffer(implode('', $cmds));
 		} else {
 			for ($i = 0; $i < count($cmds) - 1; $i++) {
 				$this->execCommand($cmds[$i]);
 			}
-			$this->execCommand($cmds[$i], CMD_OK_RQST_FINISHED);
+			$this->execCommand($cmds[$i], XS_CMD_OK_RQST_FINISHED);
 		}
 		$doc->afterSubmit($this);
 		return $this;
@@ -1205,15 +1209,15 @@ class XSIndex extends XSServer
 		$terms = is_array($term) ? array_unique($term) : array($term);
 		$terms = XS::convert($terms, 'UTF-8', $this->xs->getDefaultCharset());
 		foreach ($terms as $term) {
-			$cmds[] = new XSCommand(CMD_INDEX_REMOVE, 0, $field->vno, strtolower($term));
+			$cmds[] = new XSCommand(XS_CMD_INDEX_REMOVE, 0, $field->vno, strtolower($term));
 		}
 		if ($this->_bufSize > 0) {
 			$this->appendBuffer(implode('', $cmds));
 		} elseif (count($cmds) == 1) {
-			$this->execCommand($cmds[0], CMD_OK_RQST_FINISHED);
+			$this->execCommand($cmds[0], XS_CMD_OK_RQST_FINISHED);
 		} else {
-			$cmd = array('cmd' => CMD_INDEX_EXDATA, 'buf' => implode('', $cmds));
-			$this->execCommand($cmd, CMD_OK_RQST_FINISHED);
+			$cmd = array('cmd' => XS_CMD_INDEX_EXDATA, 'buf' => implode('', $cmds));
+			$this->execCommand($cmd, XS_CMD_OK_RQST_FINISHED);
 		}
 		return $this;
 	}
@@ -1224,13 +1228,13 @@ class XSIndex extends XSServer
 			throw new XSException('Failed to read exdata from file');
 		}
 		$first = ord(substr($data, 0, 1));
-		if ($first != CMD_IMPORT_HEADER
-				&& $first != CMD_INDEX_REQUEST && $first != CMD_INDEX_SYNONYMS
-				&& $first != CMD_INDEX_REMOVE && $first != CMD_INDEX_EXDATA) {
+		if ($first != XS_CMD_IMPORT_HEADER
+				&& $first != XS_CMD_INDEX_REQUEST && $first != XS_CMD_INDEX_SYNONYMS
+				&& $first != XS_CMD_INDEX_REMOVE && $first != XS_CMD_INDEX_EXDATA) {
 			throw new XSException('Invalid start command of exdata (CMD:' . $first . ')');
 		}
-		$cmd = array('cmd' => CMD_INDEX_EXDATA, 'buf' => $data);
-		$this->execCommand($cmd, CMD_OK_RQST_FINISHED);
+		$cmd = array('cmd' => XS_CMD_INDEX_EXDATA, 'buf' => $data);
+		$this->execCommand($cmd, XS_CMD_OK_RQST_FINISHED);
 		return $this;
 	}
 	public function addSynonym($raw, $synonym)
@@ -1238,11 +1242,11 @@ class XSIndex extends XSServer
 		$raw = strval($raw);
 		$synonym = strval($synonym);
 		if ($raw !== '' && $synonym !== '') {
-			$cmd = new XSCommand(CMD_INDEX_SYNONYMS, CMD_INDEX_SYNONYMS_ADD, 0, $raw, $synonym);
+			$cmd = new XSCommand(XS_CMD_INDEX_SYNONYMS, XS_CMD_INDEX_SYNONYMS_ADD, 0, $raw, $synonym);
 			if ($this->_bufSize > 0) {
 				$this->appendBuffer(strval($cmd));
 			} else {
-				$this->execCommand($cmd, CMD_OK_RQST_FINISHED);
+				$this->execCommand($cmd, XS_CMD_OK_RQST_FINISHED);
 			}
 		}
 		return $this;
@@ -1252,11 +1256,11 @@ class XSIndex extends XSServer
 		$raw = strval($raw);
 		$synonym = $synonym === null ? '' : strval($synonym);
 		if ($raw !== '') {
-			$cmd = new XSCommand(CMD_INDEX_SYNONYMS, CMD_INDEX_SYNONYMS_DEL, 0, $raw, $synonym);
+			$cmd = new XSCommand(XS_CMD_INDEX_SYNONYMS, XS_CMD_INDEX_SYNONYMS_DEL, 0, $raw, $synonym);
 			if ($this->_bufSize > 0) {
 				$this->appendBuffer(strval($cmd));
 			} else {
-				$this->execCommand($cmd, CMD_OK_RQST_FINISHED);
+				$this->execCommand($cmd, XS_CMD_OK_RQST_FINISHED);
 			}
 		}
 		return $this;
@@ -1265,15 +1269,15 @@ class XSIndex extends XSServer
 	{
 		$level = intval($level);
 		if ($level >= 0 && $level < 16) {
-			$cmd = array('cmd' => CMD_SEARCH_SCWS_SET, 'arg1' => CMD_SCWS_SET_MULTI, 'arg2' => $level);
+			$cmd = array('cmd' => XS_CMD_SEARCH_SCWS_SET, 'arg1' => XS_CMD_SCWS_SET_MULTI, 'arg2' => $level);
 			$this->execCommand($cmd);
 		}
 		return $this;
 	}
 	public function getScwsMulti()
 	{
-		$cmd = array('cmd' => CMD_SEARCH_SCWS_GET, 'arg1' => CMD_SCWS_GET_MULTI);
-		$res = $this->execCommand($cmd, CMD_OK_INFO);
+		$cmd = array('cmd' => XS_CMD_SEARCH_SCWS_GET, 'arg1' => XS_CMD_SCWS_GET_MULTI);
+		$res = $this->execCommand($cmd, XS_CMD_OK_INFO);
 		return intval($res->buf);
 	}
 	public function openBuffer($size = 4)
@@ -1291,7 +1295,7 @@ class XSIndex extends XSServer
 	}
 	public function beginRebuild()
 	{
-		$this->execCommand(array('cmd' => CMD_INDEX_REBUILD, 'arg1' => 0), CMD_OK_DB_REBUILD);
+		$this->execCommand(array('cmd' => XS_CMD_INDEX_REBUILD, 'arg1' => 0), XS_CMD_OK_DB_REBUILD);
 		$this->_rebuild = true;
 		return $this;
 	}
@@ -1299,17 +1303,17 @@ class XSIndex extends XSServer
 	{
 		if ($this->_rebuild === true) {
 			$this->_rebuild = false;
-			$this->execCommand(array('cmd' => CMD_INDEX_REBUILD, 'arg1' => 1), CMD_OK_DB_REBUILD);
+			$this->execCommand(array('cmd' => XS_CMD_INDEX_REBUILD, 'arg1' => 1), XS_CMD_OK_DB_REBUILD);
 		}
 		return $this;
 	}
 	public function stopRebuild()
 	{
 		try {
-			$this->execCommand(array('cmd' => CMD_INDEX_REBUILD, 'arg1' => 2), CMD_OK_DB_REBUILD);
+			$this->execCommand(array('cmd' => XS_CMD_INDEX_REBUILD, 'arg1' => 2), XS_CMD_OK_DB_REBUILD);
 			$this->_rebuild = false;
 		} catch (XSException $e) {
-			if ($e->getCode() !== CMD_ERR_WRONGPLACE) {
+			if ($e->getCode() !== XS_CMD_ERR_WRONGPLACE) {
 				throw $e;
 			}
 		}
@@ -1317,15 +1321,15 @@ class XSIndex extends XSServer
 	}
 	public function setDb($name)
 	{
-		$this->execCommand(array('cmd' => CMD_INDEX_SET_DB, 'buf' => $name), CMD_OK_DB_CHANGED);
+		$this->execCommand(array('cmd' => XS_CMD_INDEX_SET_DB, 'buf' => $name), XS_CMD_OK_DB_CHANGED);
 		return $this;
 	}
 	public function flushLogging()
 	{
 		try {
-			$this->execCommand(CMD_FLUSH_LOGGING, CMD_OK_LOG_FLUSHED);
+			$this->execCommand(XS_CMD_FLUSH_LOGGING, XS_CMD_OK_LOG_FLUSHED);
 		} catch (XSException $e) {
-			if ($e->getCode() === CMD_ERR_BUSY) {
+			if ($e->getCode() === XS_CMD_ERR_BUSY) {
 				return false;
 			}
 			throw $e;
@@ -1335,9 +1339,9 @@ class XSIndex extends XSServer
 	public function flushIndex()
 	{
 		try {
-			$this->execCommand(CMD_INDEX_COMMIT, CMD_OK_DB_COMMITED);
+			$this->execCommand(XS_CMD_INDEX_COMMIT, XS_CMD_OK_DB_COMMITED);
 		} catch (XSException $e) {
-			if ($e->getCode() === CMD_ERR_BUSY || $e->getCode() === CMD_ERR_RUNNING) {
+			if ($e->getCode() === XS_CMD_ERR_BUSY || $e->getCode() === XS_CMD_ERR_RUNNING) {
 				return false;
 			}
 			throw $e;
@@ -1346,13 +1350,13 @@ class XSIndex extends XSServer
 	}
 	public function getCustomDict()
 	{
-		$res = $this->execCommand(CMD_INDEX_USER_DICT, CMD_OK_INFO);
+		$res = $this->execCommand(XS_CMD_INDEX_USER_DICT, XS_CMD_OK_INFO);
 		return $res->buf;
 	}
 	public function setCustomDict($content)
 	{
-		$cmd = array('cmd' => CMD_INDEX_USER_DICT, 'arg1' => 1, 'buf' => $content);
-		$this->execCommand($cmd, CMD_OK_DICT_SAVED);
+		$cmd = array('cmd' => XS_CMD_INDEX_USER_DICT, 'arg1' => 1, 'buf' => $content);
+		$this->execCommand($cmd, XS_CMD_OK_DICT_SAVED);
 	}
 	public function close($ioerr = false)
 	{
@@ -1386,7 +1390,7 @@ class XSSearch extends XSServer
 {
 	const PAGE_SIZE = 10;
 	const LOG_DB = 'log_db';
-	private $_defaultOp = CMD_QUERY_OP_AND;
+	private $_defaultOp = XS_CMD_QUERY_OP_AND;
 	private $_prefix, $_fieldSet, $_resetScheme = false;
 	private $_query, $_terms, $_count;
 	private $_lastCount, $_highlight;
@@ -1412,49 +1416,49 @@ class XSSearch extends XSServer
 	}
 	public function setFuzzy($value = true)
 	{
-		$this->_defaultOp = $value === true ? CMD_QUERY_OP_OR : CMD_QUERY_OP_AND;
+		$this->_defaultOp = $value === true ? XS_CMD_QUERY_OP_OR : XS_CMD_QUERY_OP_AND;
 		return $this;
 	}
 	public function setCutOff($percent, $weight = 0)
 	{
 		$percent = max(0, min(100, intval($percent)));
 		$weight = max(0, (intval($weight * 10) & 255));
-		$cmd = new XSCommand(CMD_SEARCH_SET_CUTOFF, $percent, $weight);
+		$cmd = new XSCommand(XS_CMD_SEARCH_SET_CUTOFF, $percent, $weight);
 		$this->execCommand($cmd);
 		return $this;
 	}
 	public function setRequireMatchedTerm($value = true)
 	{
-		$arg1 = CMD_SEARCH_MISC_MATCHED_TERM;
+		$arg1 = XS_CMD_SEARCH_MISC_MATCHED_TERM;
 		$arg2 = $value === true ? 1 : 0;
-		$cmd = new XSCommand(CMD_SEARCH_SET_MISC, $arg1, $arg2);
+		$cmd = new XSCommand(XS_CMD_SEARCH_SET_MISC, $arg1, $arg2);
 		$this->execCommand($cmd);
 		return $this;
 	}
 	public function setAutoSynonyms($value = true)
 	{
-		$flag = CMD_PARSE_FLAG_BOOLEAN | CMD_PARSE_FLAG_PHRASE | CMD_PARSE_FLAG_LOVEHATE;
+		$flag = XS_CMD_PARSE_FLAG_BOOLEAN | XS_CMD_PARSE_FLAG_PHRASE | XS_CMD_PARSE_FLAG_LOVEHATE;
 		if ($value === true) {
-			$flag |= CMD_PARSE_FLAG_AUTO_MULTIWORD_SYNONYMS;
+			$flag |= XS_CMD_PARSE_FLAG_AUTO_MULTIWORD_SYNONYMS;
 		}
-		$cmd = array('cmd' => CMD_QUERY_PARSEFLAG, 'arg' => $flag);
+		$cmd = array('cmd' => XS_CMD_QUERY_PARSEFLAG, 'arg' => $flag);
 		$this->execCommand($cmd);
 		return $this;
 	}
 	public function setSynonymScale($value)
 	{
-		$arg1 = CMD_SEARCH_MISC_SYN_SCALE;
+		$arg1 = XS_CMD_SEARCH_MISC_SYN_SCALE;
 		$arg2 = max(0, (intval($value * 100) & 255));
-		$cmd = new XSCommand(CMD_SEARCH_SET_MISC, $arg1, $arg2);
+		$cmd = new XSCommand(XS_CMD_SEARCH_SET_MISC, $arg1, $arg2);
 		$this->execCommand($cmd);
 		return $this;
 	}
 	public function getAllSynonyms($limit = 0, $offset = 0, $stemmed = false)
 	{
 		$page = $limit > 0 ? pack('II', intval($offset), intval($limit)) : '';
-		$cmd = array('cmd' => CMD_SEARCH_GET_SYNONYMS, 'buf1' => $page);
+		$cmd = array('cmd' => XS_CMD_SEARCH_GET_SYNONYMS, 'buf1' => $page);
 		$cmd['arg1'] = $stemmed == true ? 1 : 0;
-		$res = $this->execCommand($cmd, CMD_OK_RESULT_SYNONYMS);
+		$res = $this->execCommand($cmd, XS_CMD_OK_RESULT_SYNONYMS);
 		$ret = array();
 		if (!empty($res->buf)) {
 			foreach (explode("\n", $res->buf) as $line) {
@@ -1465,17 +1469,28 @@ class XSSearch extends XSServer
 		}
 		return $ret;
 	}
+	public function getSynonyms($term)
+	{
+		$term = strval($term);
+		if (strlen($term) === 0) {
+			return false;
+		}
+		$cmd = array('cmd' => XS_CMD_SEARCH_GET_SYNONYMS, 'arg1' => 2, 'buf' => $term);
+		$res = $this->execCommand($cmd, XS_CMD_OK_RESULT_SYNONYMS);
+		$ret = $res->buf === '' ? array() : explode("\n", $res->buf);
+		return $ret;
+	}
 	public function getQuery($query = null)
 	{
 		$query = $query === null ? '' : $this->preQueryString($query);
-		$cmd = new XSCommand(CMD_QUERY_GET_STRING, 0, $this->_defaultOp, $query);
-		$res = $this->execCommand($cmd, CMD_OK_QUERY_STRING);
+		$cmd = new XSCommand(XS_CMD_QUERY_GET_STRING, 0, $this->_defaultOp, $query);
+		$res = $this->execCommand($cmd, XS_CMD_OK_QUERY_STRING);
 		if (strpos($res->buf, 'VALUE_RANGE') !== false) {
-			$regex = '/(VALUE_RANGE) (\d+) (\S+) (\S+?)(?=\))/';
+			$regex = '/(VALUE_RANGE) (\d+) (\S+) (.+?)(?=\))/';
 			$res->buf = preg_replace_callback($regex, array($this, 'formatValueRange'), $res->buf);
 		}
 		if (strpos($res->buf, 'VALUE_GE') !== false || strpos($res->buf, 'VALUE_LE') !== false) {
-			$regex = '/(VALUE_[GL]E) (\d+) (\S+?)(?=\))/';
+			$regex = '/(VALUE_[GL]E) (\d+) (.+?)(?=\))/';
 			$res->buf = preg_replace_callback($regex, array($this, 'formatValueRange'), $res->buf);
 		}
 		return XS::convert($res->buf, $this->_charset, 'UTF-8');
@@ -1508,14 +1523,14 @@ class XSSearch extends XSServer
 			}
 		}
 		if ($buf !== '') {
-			$type = CMD_SORT_TYPE_MULTI;
+			$type = XS_CMD_SORT_TYPE_MULTI;
 			if ($relevance_first) {
-				$type |= CMD_SORT_FLAG_RELEVANCE;
+				$type |= XS_CMD_SORT_FLAG_RELEVANCE;
 			}
 			if (!$reverse) {
-				$type |= CMD_SORT_FLAG_ASCENDING;
+				$type |= XS_CMD_SORT_FLAG_ASCENDING;
 			}
-			$cmd = new XSCommand(CMD_SEARCH_SET_SORT, $type, 0, $buf);
+			$cmd = new XSCommand(XS_CMD_SEARCH_SET_SORT, $type, 0, $buf);
 			$this->execCommand($cmd);
 		}
 		return $this;
@@ -1526,25 +1541,25 @@ class XSSearch extends XSServer
 			return $this->setMultiSort($field, $asc, $relevance_first);
 		}
 		if ($field === null) {
-			$cmd = new XSCommand(CMD_SEARCH_SET_SORT, CMD_SORT_TYPE_RELEVANCE);
+			$cmd = new XSCommand(XS_CMD_SEARCH_SET_SORT, XS_CMD_SORT_TYPE_RELEVANCE);
 		} else {
-			$type = CMD_SORT_TYPE_VALUE;
+			$type = XS_CMD_SORT_TYPE_VALUE;
 			if ($relevance_first) {
-				$type |= CMD_SORT_FLAG_RELEVANCE;
+				$type |= XS_CMD_SORT_FLAG_RELEVANCE;
 			}
 			if ($asc) {
-				$type |= CMD_SORT_FLAG_ASCENDING;
+				$type |= XS_CMD_SORT_FLAG_ASCENDING;
 			}
 			$vno = $this->xs->getField($field, true)->vno;
-			$cmd = new XSCommand(CMD_SEARCH_SET_SORT, $type, $vno);
+			$cmd = new XSCommand(XS_CMD_SEARCH_SET_SORT, $type, $vno);
 		}
 		$this->execCommand($cmd);
 		return $this;
 	}
 	public function setDocOrder($asc = false)
 	{
-		$type = CMD_SORT_TYPE_DOCID | ($asc ? CMD_SORT_FLAG_ASCENDING : 0);
-		$cmd = new XSCommand(CMD_SEARCH_SET_SORT, $type);
+		$type = XS_CMD_SORT_TYPE_DOCID | ($asc ? XS_CMD_SORT_FLAG_ASCENDING : 0);
+		$cmd = new XSCommand(XS_CMD_SEARCH_SET_SORT, $type);
 		$this->execCommand($cmd);
 		return $this;
 	}
@@ -1552,7 +1567,7 @@ class XSSearch extends XSServer
 	{
 		$vno = $field === null ? XSFieldScheme::MIXED_VNO : $this->xs->getField($field, true)->vno;
 		$max = min(255, intval($num));
-		$cmd = new XSCommand(CMD_SEARCH_SET_COLLAPSE, $max, $vno);
+		$cmd = new XSCommand(XS_CMD_SEARCH_SET_COLLAPSE, $max, $vno);
 		$this->execCommand($cmd);
 		return $this;
 	}
@@ -1572,11 +1587,11 @@ class XSSearch extends XSServer
 			$from = XS::convert($from, 'UTF-8', $this->_charset);
 			$to = XS::convert($to, 'UTF-8', $this->_charset);
 			if ($from === null) {
-				$cmd = new XSCommand(CMD_QUERY_VALCMP, CMD_QUERY_OP_FILTER, $vno, $to, chr(CMD_VALCMP_LE));
+				$cmd = new XSCommand(XS_CMD_QUERY_VALCMP, XS_CMD_QUERY_OP_FILTER, $vno, $to, chr(XS_CMD_VALCMP_LE));
 			} elseif ($to === null) {
-				$cmd = new XSCommand(CMD_QUERY_VALCMP, CMD_QUERY_OP_FILTER, $vno, $from, chr(CMD_VALCMP_GE));
+				$cmd = new XSCommand(XS_CMD_QUERY_VALCMP, XS_CMD_QUERY_OP_FILTER, $vno, $from, chr(XS_CMD_VALCMP_GE));
 			} else {
-				$cmd = new XSCommand(CMD_QUERY_RANGE, CMD_QUERY_OP_FILTER, $vno, $from, $to);
+				$cmd = new XSCommand(XS_CMD_QUERY_RANGE, XS_CMD_QUERY_OP_FILTER, $vno, $from, $to);
 			}
 			$this->execCommand($cmd);
 		}
@@ -1584,7 +1599,7 @@ class XSSearch extends XSServer
 	}
 	public function addWeight($field, $term, $weight = 1)
 	{
-		return $this->addQueryTerm($field, $term, CMD_QUERY_OP_AND_MAYBE, $weight);
+		return $this->addQueryTerm($field, $term, XS_CMD_QUERY_OP_AND_MAYBE, $weight);
 	}
 	public function setFacets($field, $exact = false)
 	{
@@ -1599,7 +1614,7 @@ class XSSearch extends XSServer
 			}
 			$buf .= chr($ff->vno);
 		}
-		$cmd = array('cmd' => CMD_SEARCH_SET_FACETS, 'buf' => $buf);
+		$cmd = array('cmd' => XS_CMD_SEARCH_SET_FACETS, 'buf' => $buf);
 		$cmd['arg1'] = $exact === true ? 1 : 0;
 		$this->execCommand($cmd);
 		return $this;
@@ -1615,7 +1630,7 @@ class XSSearch extends XSServer
 	{
 		$level = intval($level);
 		if ($level >= 0 && $level < 16) {
-			$cmd = array('cmd' => CMD_SEARCH_SCWS_SET, 'arg1' => CMD_SCWS_SET_MULTI, 'arg2' => $level);
+			$cmd = array('cmd' => XS_CMD_SEARCH_SCWS_SET, 'arg1' => XS_CMD_SCWS_SET_MULTI, 'arg2' => $level);
 			$this->execCommand($cmd);
 		}
 		return $this;
@@ -1629,7 +1644,7 @@ class XSSearch extends XSServer
 	public function setDb($name)
 	{
 		$name = strval($name);
-		$this->execCommand(array('cmd' => CMD_SEARCH_SET_DB, 'buf' => strval($name)));
+		$this->execCommand(array('cmd' => XS_CMD_SEARCH_SET_DB, 'buf' => strval($name)));
 		$this->_lastDb = $this->_curDb;
 		$this->_lastDbs = $this->_curDbs;
 		$this->_curDb = $name;
@@ -1639,7 +1654,7 @@ class XSSearch extends XSServer
 	public function addDb($name)
 	{
 		$name = strval($name);
-		$this->execCommand(array('cmd' => CMD_SEARCH_ADD_DB, 'buf' => $name));
+		$this->execCommand(array('cmd' => XS_CMD_SEARCH_ADD_DB, 'buf' => $name));
 		$this->_curDbs[] = $name;
 		return $this;
 	}
@@ -1653,8 +1668,8 @@ class XSSearch extends XSServer
 		if ($query === '' && $this->_terms !== null) {
 			$ret = $this->_terms;
 		} else {
-			$cmd = new XSCommand(CMD_QUERY_GET_TERMS, 0, $this->_defaultOp, $query);
-			$res = $this->execCommand($cmd, CMD_OK_QUERY_TERMS);
+			$cmd = new XSCommand(XS_CMD_QUERY_GET_TERMS, 0, $this->_defaultOp, $query);
+			$res = $this->execCommand($cmd, XS_CMD_OK_QUERY_TERMS);
 			$ret = array();
 			$tmps = explode(' ', $res->buf);
 			for ($i = 0; $i < count($tmps); $i++) {
@@ -1675,8 +1690,8 @@ class XSSearch extends XSServer
 		if ($query === '' && $this->_count !== null) {
 			return $this->_count;
 		}
-		$cmd = new XSCommand(CMD_SEARCH_GET_TOTAL, 0, $this->_defaultOp, $query);
-		$res = $this->execCommand($cmd, CMD_OK_SEARCH_TOTAL);
+		$cmd = new XSCommand(XS_CMD_SEARCH_GET_TOTAL, 0, $this->_defaultOp, $query);
+		$res = $this->execCommand($cmd, XS_CMD_OK_SEARCH_TOTAL);
 		$ret = unpack('Icount', $res->buf);
 		if ($query === '') {
 			$this->_count = $ret['count'];
@@ -1690,15 +1705,15 @@ class XSSearch extends XSServer
 		}
 		$query = $query === null ? '' : $this->preQueryString($query);
 		$page = pack('II', $this->_offset, $this->_limit > 0 ? $this->_limit : self::PAGE_SIZE);
-		$cmd = new XSCommand(CMD_SEARCH_GET_RESULT, 0, $this->_defaultOp, $query, $page);
-		$res = $this->execCommand($cmd, CMD_OK_RESULT_BEGIN);
+		$cmd = new XSCommand(XS_CMD_SEARCH_GET_RESULT, 0, $this->_defaultOp, $query, $page);
+		$res = $this->execCommand($cmd, XS_CMD_OK_RESULT_BEGIN);
 		$tmp = unpack('Icount', $res->buf);
 		$this->_lastCount = $tmp['count'];
 		$ret = $this->_facets = array();
 		$vnoes = $this->xs->getScheme()->getVnoMap();
 		while (true) {
 			$res = $this->getRespond();
-			if ($res->cmd == CMD_SEARCH_RESULT_FACETS) {
+			if ($res->cmd == XS_CMD_SEARCH_RESULT_FACETS) {
 				$off = 0;
 				while (($off + 6) < strlen($res->buf)) {
 					$tmp = unpack('Cvno/Cvlen/Inum', substr($res->buf, $off, 6));
@@ -1712,19 +1727,19 @@ class XSSearch extends XSServer
 					}
 					$off += $tmp['vlen'] + 6;
 				}
-			} elseif ($res->cmd == CMD_SEARCH_RESULT_DOC) {
+			} elseif ($res->cmd == XS_CMD_SEARCH_RESULT_DOC) {
 				$doc = new XSDocument($res->buf, $this->_charset);
 				$ret[] = $doc;
-			} elseif ($res->cmd == CMD_SEARCH_RESULT_FIELD) {
+			} elseif ($res->cmd == XS_CMD_SEARCH_RESULT_FIELD) {
 				if (isset($doc)) {
 					$name = isset($vnoes[$res->arg]) ? $vnoes[$res->arg] : $res->arg;
 					$doc->setField($name, $res->buf);
 				}
-			} elseif ($res->cmd == CMD_SEARCH_RESULT_MATCHED) {
+			} elseif ($res->cmd == XS_CMD_SEARCH_RESULT_MATCHED) {
 				if (isset($doc)) {
 					$doc->setField('matched', explode(' ', $res->buf), true);
 				}
-			} elseif ($res->cmd == CMD_OK && $res->arg == CMD_OK_RESULT_END) {
+			} elseif ($res->cmd == XS_CMD_OK && $res->arg == XS_CMD_OK_RESULT_END) {
 				break;
 			} else {
 				$msg = 'Unexpected respond in search {CMD:' . $res->cmd . ', ARG:' . $res->arg . '}';
@@ -1749,8 +1764,8 @@ class XSSearch extends XSServer
 	}
 	public function getDbTotal()
 	{
-		$cmd = new XSCommand(CMD_SEARCH_DB_TOTAL);
-		$res = $this->execCommand($cmd, CMD_OK_DB_TOTAL);
+		$cmd = new XSCommand(XS_CMD_SEARCH_DB_TOTAL);
+		$res = $this->execCommand($cmd, XS_CMD_OK_DB_TOTAL);
 		$tmp = unpack('Itotal', $res->buf);
 		return $tmp['total'];
 	}
@@ -1771,7 +1786,7 @@ class XSSearch extends XSServer
 			}
 			$this->restoreDb();
 		} catch (XSException $e) {
-			if ($e->getCode() != CMD_ERR_XAPIAN) {
+			if ($e->getCode() != XS_CMD_ERR_XAPIAN) {
 				throw $e;
 			}
 		}
@@ -1804,7 +1819,7 @@ class XSSearch extends XSServer
 				}
 			}
 		} catch (XSException $e) {
-			if ($e->getCode() != CMD_ERR_XAPIAN) {
+			if ($e->getCode() != XS_CMD_ERR_XAPIAN) {
 				throw $e;
 			}
 		}
@@ -1819,13 +1834,13 @@ class XSSearch extends XSServer
 		$limit = max(1, min(20, intval($limit)));
 		try {
 			$buf = XS::convert($query, 'UTF-8', $this->_charset);
-			$cmd = array('cmd' => CMD_QUERY_GET_EXPANDED, 'arg1' => $limit, 'buf' => $buf);
-			$res = $this->execCommand($cmd, CMD_OK_RESULT_BEGIN);
+			$cmd = array('cmd' => XS_CMD_QUERY_GET_EXPANDED, 'arg1' => $limit, 'buf' => $buf);
+			$res = $this->execCommand($cmd, XS_CMD_OK_RESULT_BEGIN);
 			while (true) {
 				$res = $this->getRespond();
-				if ($res->cmd == CMD_SEARCH_RESULT_FIELD) {
+				if ($res->cmd == XS_CMD_SEARCH_RESULT_FIELD) {
 					$ret[] = XS::convert($res->buf, $this->_charset, 'UTF-8');
-				} elseif ($res->cmd == CMD_OK && $res->arg == CMD_OK_RESULT_END) {
+				} elseif ($res->cmd == XS_CMD_OK && $res->arg == XS_CMD_OK_RESULT_END) {
 					break;
 				} else {
 					$msg = 'Unexpected respond in search {CMD:' . $res->cmd . ', ARG:' . $res->arg . '}';
@@ -1833,7 +1848,7 @@ class XSSearch extends XSServer
 				}
 			}
 		} catch (XSException $e) {
-			if ($e->getCode() != CMD_ERR_XAPIAN) {
+			if ($e->getCode() != XS_CMD_ERR_XAPIAN) {
 				throw $e;
 			}
 		}
@@ -1853,13 +1868,13 @@ class XSSearch extends XSServer
 				return $ret;
 			}
 			$buf = XS::convert($query, 'UTF-8', $this->_charset);
-			$cmd = array('cmd' => CMD_QUERY_GET_CORRECTED, 'buf' => $buf);
-			$res = $this->execCommand($cmd, CMD_OK_QUERY_CORRECTED);
+			$cmd = array('cmd' => XS_CMD_QUERY_GET_CORRECTED, 'buf' => $buf);
+			$res = $this->execCommand($cmd, XS_CMD_OK_QUERY_CORRECTED);
 			if ($res->buf !== '') {
 				$ret = explode("\n", XS::convert($res->buf, $this->_charset, 'UTF-8'));
 			}
 		} catch (XSException $e) {
-			if ($e->getCode() != CMD_ERR_XAPIAN) {
+			if ($e->getCode() != XS_CMD_ERR_XAPIAN) {
 				throw $e;
 			}
 		}
@@ -1867,11 +1882,11 @@ class XSSearch extends XSServer
 	}
 	public function addSearchLog($query, $wdf = 1)
 	{
-		$cmd = array('cmd' => CMD_SEARCH_ADD_LOG, 'buf' => $query);
+		$cmd = array('cmd' => XS_CMD_SEARCH_ADD_LOG, 'buf' => $query);
 		if ($wdf > 1) {
 			$cmd['buf1'] = pack('i', $wdf);
 		}
-		$this->execCommand($cmd, CMD_OK_LOGGED);
+		$this->execCommand($cmd, XS_CMD_OK_LOGGED);
 	}
 	public function highlight($value, $strtr = false)
 	{
@@ -1886,8 +1901,8 @@ class XSSearch extends XSServer
 		}
 		if (isset($this->_highlight['pairs'])) {
 			$value = $strtr ?
-					strtr($value, $this->_highlight['pairs']) :
-					str_replace(array_keys($this->_highlight['pairs']), array_values($this->_highlight['pairs']), $value);
+				strtr($value, $this->_highlight['pairs']) :
+				str_replace(array_keys($this->_highlight['pairs']), array_values($this->_highlight['pairs']), $value);
 		}
 		return $value;
 	}
@@ -1900,8 +1915,8 @@ class XSSearch extends XSServer
 			$terms = $this->terms($query, false);
 		} else {
 			$query = $this->_query;
-			if (!$this->_lastCount || ($this->_defaultOp == CMD_QUERY_OP_OR && strpos($query, ' '))
-					|| strpos($query, ' OR ') || strpos($query, ' NOT ') || strpos($query, ' XOR ')) {
+			if (!$this->_lastCount || ($this->_defaultOp == XS_CMD_QUERY_OP_OR && strpos($query, ' '))
+				|| strpos($query, ' OR ') || strpos($query, ' NOT ') || strpos($query, ' XOR ')) {
 				return;
 			}
 			$terms = $this->terms(null, false);
@@ -1933,7 +1948,7 @@ class XSSearch extends XSServer
 	}
 	private function clearQuery()
 	{
-		$cmd = new XSCommand(CMD_QUERY_INIT);
+		$cmd = new XSCommand(XS_CMD_QUERY_INIT);
 		if ($this->_resetScheme === true) {
 			$cmd->arg1 = 1;
 			$this->_prefix = array();
@@ -1943,21 +1958,21 @@ class XSSearch extends XSServer
 		$this->execCommand($cmd);
 		$this->_query = $this->_count = $this->_terms = null;
 	}
-	public function addQueryString($query, $addOp = CMD_QUERY_OP_AND, $scale = 1)
+	public function addQueryString($query, $addOp = XS_CMD_QUERY_OP_AND, $scale = 1)
 	{
 		$query = $this->preQueryString($query);
 		$bscale = ($scale > 0 && $scale != 1) ? pack('n', intval($scale * 100)) : '';
-		$cmd = new XSCommand(CMD_QUERY_PARSE, $addOp, $this->_defaultOp, $query, $bscale);
+		$cmd = new XSCommand(XS_CMD_QUERY_PARSE, $addOp, $this->_defaultOp, $query, $bscale);
 		$this->execCommand($cmd);
 		return $query;
 	}
-	public function addQueryTerm($field, $term, $addOp = CMD_QUERY_OP_AND, $scale = 1)
+	public function addQueryTerm($field, $term, $addOp = XS_CMD_QUERY_OP_AND, $scale = 1)
 	{
 		$term = strtolower($term);
 		$term = XS::convert($term, 'UTF-8', $this->_charset);
 		$bscale = ($scale > 0 && $scale != 1) ? pack('n', intval($scale * 100)) : '';
 		$vno = $field === null ? XSFieldScheme::MIXED_VNO : $this->xs->getField($field, true)->vno;
-		$cmd = new XSCommand(CMD_QUERY_TERM, $addOp, $vno, $term, $bscale);
+		$cmd = new XSCommand(XS_CMD_QUERY_TERM, $addOp, $vno, $term, $bscale);
 		$this->execCommand($cmd);
 		return $this;
 	}
@@ -1994,7 +2009,7 @@ class XSSearch extends XSServer
 				}
 				$name = substr($part, $i, $pos - $i);
 				if (($field = $this->xs->getField($name, false)) !== false
-						&& $field->vno != XSFieldScheme::MIXED_VNO) {
+					&& $field->vno != XSFieldScheme::MIXED_VNO) {
 					$this->regQueryPrefix($name);
 					if ($field->hasCustomTokenizer()) {
 						$prefix = $i > 0 ? substr($part, 0, $i) : '';
@@ -2020,7 +2035,7 @@ class XSSearch extends XSServer
 				}
 			}
 			if (strlen($part) > 1 && ($part[0] == '+' || $part[0] == '-') && $part[1] != '('
-					&& preg_match('/[\x81-\xfe]/', $part)) {
+				&& preg_match('/[\x81-\xfe]/', $part)) {
 				$newQuery .= substr($part, 0, 1) . '(' . substr($part, 1) . ')';
 				continue;
 			}
@@ -2031,10 +2046,10 @@ class XSSearch extends XSServer
 	private function regQueryPrefix($name)
 	{
 		if (!isset($this->_prefix[$name])
-				&& ($field = $this->xs->getField($name, false))
-				&& ($field->vno != XSFieldScheme::MIXED_VNO)) {
-			$type = $field->isBoolIndex() ? CMD_PREFIX_BOOLEAN : CMD_PREFIX_NORMAL;
-			$cmd = new XSCommand(CMD_QUERY_PREFIX, $type, $field->vno, $name);
+			&& ($field = $this->xs->getField($name, false))
+			&& ($field->vno != XSFieldScheme::MIXED_VNO)) {
+			$type = $field->isBoolIndex() ? XS_CMD_PREFIX_BOOLEAN : XS_CMD_PREFIX_NORMAL;
+			$cmd = new XSCommand(XS_CMD_QUERY_PREFIX, $type, $field->vno, $name);
 			$this->execCommand($cmd);
 			$this->_prefix[$name] = true;
 		}
@@ -2047,11 +2062,11 @@ class XSSearch extends XSServer
 		foreach ($this->xs->getAllFields() as $field) /* @var $field XSFieldMeta */ {
 			if ($field->cutlen != 0) {
 				$len = min(127, ceil($field->cutlen / 10));
-				$cmd = new XSCommand(CMD_SEARCH_SET_CUT, $len, $field->vno);
+				$cmd = new XSCommand(XS_CMD_SEARCH_SET_CUT, $len, $field->vno);
 				$this->execCommand($cmd);
 			}
 			if ($field->isNumeric()) {
-				$cmd = new XSCommand(CMD_SEARCH_SET_NUMERIC, 0, $field->vno);
+				$cmd = new XSCommand(XS_CMD_SEARCH_SET_NUMERIC, 0, $field->vno);
 				$this->execCommand($cmd);
 			}
 		}
@@ -2141,6 +2156,10 @@ class XSSearch extends XSServer
 		}
 		return $field->name . ':[' . $val1 . ',' . $val2 . ']';
 	}
+	private function numfromstr($str, $index)
+	{
+		return $index < strlen($str) ? ord($str[$index]) : 0;
+	}
 	private function xapianUnserialise($value)
 	{
 		if ($value === "\x80") {
@@ -2165,7 +2184,7 @@ class XSSearch extends XSServer
 				$exponent ^= 0x07;
 			}
 		} else {
-			$c = ord($value[++$i]);
+			$c = $this->numfromstr($value, ++$i);
 			$exponent <<= 6;
 			$exponent |= ($c >> 2);
 			if ($negative ^ $exponent_negative) {
@@ -2173,15 +2192,15 @@ class XSSearch extends XSServer
 			}
 		}
 		$word1 = ($c & 0x03) << 24;
-		$word1 |= ord($value[++$i]) << 16;
-		$word1 |= ord($value[++$i]) << 8;
-		$word1 |= ord($value[++$i]);
+		$word1 |= $this->numfromstr($value, ++$i) << 16;
+		$word1 |= $this->numfromstr($value, ++$i) << 8;
+		$word1 |= $this->numfromstr($value, ++$i);
 		$word2 = 0;
 		if ($i < strlen($value)) {
-			$word2 = ord($value[++$i]) << 24;
-			$word2 |= ord($value[++$i]) << 16;
-			$word2 |= ord($value[++$i]) << 8;
-			$word2 |= ord($value[++$i]);
+			$word2 = $this->numfromstr($value, ++$i) << 24;
+			$word2 |= $this->numfromstr($value, ++$i) << 16;
+			$word2 |= $this->numfromstr($value, ++$i) << 8;
+			$word2 |= $this->numfromstr($value, ++$i);
 		}
 		if (!$negative) {
 			$word1 |= 1 << 26;
@@ -2224,7 +2243,7 @@ class XSSearch extends XSServer
 }
 class XSCommand extends XSComponent
 {
-	public $cmd = CMD_NONE;
+	public $cmd = XS_CMD_NONE;
 	public $arg1 = 0;
 	public $arg2 = 0;
 	public $buf = '';
@@ -2311,7 +2330,7 @@ class XSServer extends XSComponent
 				$this->_sendBuffer = '';
 			}
 			if (!$ioerr && !($this->_flag & self::FILE)) {
-				$cmd = new XSCommand(CMD_QUIT);
+				$cmd = new XSCommand(XS_CMD_QUIT);
 				fwrite($this->_sock, $cmd);
 			}
 			fclose($this->_sock);
@@ -2339,17 +2358,17 @@ class XSServer extends XSComponent
 	public function setProject($name, $home = '')
 	{
 		if ($name !== $this->_project) {
-			$cmd = array('cmd' => CMD_USE, 'buf' => $name, 'buf1' => $home);
-			$this->execCommand($cmd, CMD_OK_PROJECT);
+			$cmd = array('cmd' => XS_CMD_USE, 'buf' => $name, 'buf1' => $home);
+			$this->execCommand($cmd, XS_CMD_OK_PROJECT);
 			$this->_project = $name;
 		}
 	}
 	public function setTimeout($sec)
 	{
-		$cmd = array('cmd' => CMD_TIMEOUT, 'arg' => $sec);
-		$this->execCommand($cmd, CMD_OK_TIMEOUT_SET);
+		$cmd = array('cmd' => XS_CMD_TIMEOUT, 'arg' => $sec);
+		$this->execCommand($cmd, XS_CMD_OK_TIMEOUT_SET);
 	}
-	public function execCommand($cmd, $res_arg = CMD_NONE, $res_cmd = CMD_OK)
+	public function execCommand($cmd, $res_arg = XS_CMD_NONE, $res_cmd = XS_CMD_OK)
 	{
 		if (!$cmd instanceof XSCommand) {
 			$cmd = new XSCommand($cmd);
@@ -2365,10 +2384,10 @@ class XSServer extends XSComponent
 			return true;
 		}
 		$res = $this->getRespond();
-		if ($res->cmd === CMD_ERR && $res_cmd != CMD_ERR) {
+		if ($res->cmd === XS_CMD_ERR && $res_cmd != XS_CMD_ERR) {
 			throw new XSException($res->buf, $res->arg);
 		}
-		if ($res->cmd != $res_cmd || ($res_arg != CMD_NONE && $res->arg != $res_arg)) {
+		if ($res->cmd != $res_cmd || ($res_arg != XS_CMD_NONE && $res->arg != $res_arg)) {
 			throw new XSException('Unexpected respond {CMD:' . $res->cmd . ', ARG:' . $res->arg . '}');
 		}
 		return $res;
@@ -2626,14 +2645,14 @@ class XSTokenizerScws implements XSTokenizer
 	}
 	public function setIgnore($yes = true)
 	{
-		$this->_setting['ignore'] = new XSCommand(CMD_SEARCH_SCWS_SET, CMD_SCWS_SET_IGNORE, $yes === false
+		$this->_setting['ignore'] = new XSCommand(XS_CMD_SEARCH_SCWS_SET, XS_CMD_SCWS_SET_IGNORE, $yes === false
 							? 0 : 1);
 		return $this;
 	}
 	public function setMulti($mode = 3)
 	{
 		$mode = intval($mode) & self::MULTI_MASK;
-		$this->_setting['multi'] = new XSCommand(CMD_SEARCH_SCWS_SET, CMD_SCWS_SET_MULTI, $mode);
+		$this->_setting['multi'] = new XSCommand(XS_CMD_SEARCH_SCWS_SET, XS_CMD_SCWS_SET_MULTI, $mode);
 		return $this;
 	}
 	public function setDict($fpath, $mode = null)
@@ -2641,7 +2660,7 @@ class XSTokenizerScws implements XSTokenizer
 		if (!is_int($mode)) {
 			$mode = stripos($fpath, '.txt') !== false ? SCWS_XDICT_TXT : SCWS_XDICT_XDB;
 		}
-		$this->_setting['set_dict'] = new XSCommand(CMD_SEARCH_SCWS_SET, CMD_SCWS_SET_DICT, $mode, $fpath);
+		$this->_setting['set_dict'] = new XSCommand(XS_CMD_SEARCH_SCWS_SET, XS_CMD_SCWS_SET_DICT, $mode, $fpath);
 		unset($this->_setting['add_dict']);
 		return $this;
 	}
@@ -2653,27 +2672,27 @@ class XSTokenizerScws implements XSTokenizer
 		if (!isset($this->_setting['add_dict'])) {
 			$this->_setting['add_dict'] = array();
 		}
-		$this->_setting['add_dict'][] = new XSCommand(CMD_SEARCH_SCWS_SET, CMD_SCWS_ADD_DICT, $mode, $fpath);
+		$this->_setting['add_dict'][] = new XSCommand(XS_CMD_SEARCH_SCWS_SET, XS_CMD_SCWS_ADD_DICT, $mode, $fpath);
 		return $this;
 	}
 	public function setDuality($yes = true)
 	{
-		$this->_setting['duality'] = new XSCommand(CMD_SEARCH_SCWS_SET, CMD_SCWS_SET_DUALITY, $yes === false
+		$this->_setting['duality'] = new XSCommand(XS_CMD_SEARCH_SCWS_SET, XS_CMD_SCWS_SET_DUALITY, $yes === false
 							? 0 : 1);
 		return $this;
 	}
 	public function getVersion()
 	{
-		$cmd = new XSCommand(CMD_SEARCH_SCWS_GET, CMD_SCWS_GET_VERSION);
-		$res = self::$_server->execCommand($cmd, CMD_OK_INFO);
+		$cmd = new XSCommand(XS_CMD_SEARCH_SCWS_GET, XS_CMD_SCWS_GET_VERSION);
+		$res = self::$_server->execCommand($cmd, XS_CMD_OK_INFO);
 		return $res->buf;
 	}
 	public function getResult($text)
 	{
 		$words = array();
 		$text = $this->applySetting($text);
-		$cmd = new XSCommand(CMD_SEARCH_SCWS_GET, CMD_SCWS_GET_RESULT, 0, $text);
-		$res = self::$_server->execCommand($cmd, CMD_OK_SCWS_RESULT);
+		$cmd = new XSCommand(XS_CMD_SEARCH_SCWS_GET, XS_CMD_SCWS_GET_RESULT, 0, $text);
+		$res = self::$_server->execCommand($cmd, XS_CMD_OK_SCWS_RESULT);
 		while ($res->buf !== '') {
 			$tmp = unpack('Ioff/a4attr/a*word', $res->buf);
 			$tmp['word'] = XS::convert($tmp['word'], self::$_charset, 'UTF-8');
@@ -2686,8 +2705,8 @@ class XSTokenizerScws implements XSTokenizer
 	{
 		$words = array();
 		$text = $this->applySetting($text);
-		$cmd = new XSCommand(CMD_SEARCH_SCWS_GET, CMD_SCWS_GET_TOPS, $limit, $text, $xattr);
-		$res = self::$_server->execCommand($cmd, CMD_OK_SCWS_TOPS);
+		$cmd = new XSCommand(XS_CMD_SEARCH_SCWS_GET, XS_CMD_SCWS_GET_TOPS, $limit, $text, $xattr);
+		$res = self::$_server->execCommand($cmd, XS_CMD_OK_SCWS_TOPS);
 		while ($res->buf !== '') {
 			$tmp = unpack('Itimes/a4attr/a*word', $res->buf);
 			$tmp['word'] = XS::convert($tmp['word'], self::$_charset, 'UTF-8');
@@ -2699,8 +2718,8 @@ class XSTokenizerScws implements XSTokenizer
 	public function hasWord($text, $xattr)
 	{
 		$text = $this->applySetting($text);
-		$cmd = new XSCommand(CMD_SEARCH_SCWS_GET, CMD_SCWS_HAS_WORD, 0, $text, $xattr);
-		$res = self::$_server->execCommand($cmd, CMD_OK_INFO);
+		$cmd = new XSCommand(XS_CMD_SEARCH_SCWS_GET, XS_CMD_SCWS_HAS_WORD, 0, $text, $xattr);
+		$res = self::$_server->execCommand($cmd, XS_CMD_OK_INFO);
 		return $res->buf === 'OK';
 	}
 	private function applySetting($text)

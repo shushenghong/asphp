@@ -16,6 +16,7 @@ namespace cn\asarea\core;
 class View {
 
     public $title;
+
     public $layoutFile;
 
     private $metas = [ ];
@@ -28,12 +29,18 @@ class View {
         $this->metas [$name] = $content;
     }
 
-    public function registerJSFile($jsFile) {
-        $this->jsFiles [] = $jsFile;
+    public function registerJSFile($jsFile, $name = '') {
+        if( empty( $name ) ) {
+            $name = md5( $jsFile );
+        }
+        $this->jsFiles [$name] = $jsFile;
     }
 
-    public function registerCSSFile($cssFile) {
-        $this->cssFiles [] = $cssFile;
+    public function registerCSSFile($cssFile, $name = '') {
+        if( empty( $name ) ) {
+            $name = md5( $cssFile );
+        }
+        $this->cssFiles [$name] = $cssFile;
     }
 
     private function getHeaderTags() {

@@ -20,6 +20,8 @@ class XSHelper {
 
     private static $_inited = false;
 
+    private static $_scws;
+
     private static function init() {
         if( !self::$_inited ) {
             $xsConfig = Application::getInstance()->getConfig( 'xs' );
@@ -125,5 +127,24 @@ class XSHelper {
         // 建立 XS 对象，项目名称为：demo
         $xs = new \XS( $dbName );
         return $xs->search;
+    }
+
+    /**
+     * 获取scwx分词器
+     *
+     * @param $dbName 仅仅是用于分词初始化，任意库都可以，不影响分词
+     * @return \XSTokenizerScws
+     */
+    public static function getScws($dbName) {
+        self::init();
+        if( !isset( self::$_scws ) ) {
+            XSHelper::getSearcher( $dbName );
+            self::$_scws = new \XSTokenizerScws();
+            // self::$_scws->setDict(__DIR__ . '/../data/fcdict.txt', SCWS_XDICT_TXT);
+            self::$_scws->addDict( __DIR__ . '/../data/fcdict.txt', SCWS_XDICT_TXT );
+            self::$_scws->setCharset( 'utf8' );
+        }
+        $scws = self::$_scws;
+        return $scws;
     }
 }
