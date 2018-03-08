@@ -9,6 +9,8 @@
 namespace cn\asarea\db;
 
 use cn\asarea\core\Application;
+use MongoDB\Client;
+use MongoDB\Database;
 
 /**
  * mongo 数据库
@@ -20,7 +22,7 @@ class MongoManager {
     /**
      * 公用的采用app系统配置的mongo数据库
      *
-     * @var \MongoDB
+     * @var MongoDB\Database
      */
     private static $_db;
 
@@ -32,7 +34,7 @@ class MongoManager {
      *        'port' => '27017',
      *        'db' => 'laoxinwen'
      *        )
-     * @return \MongoDB
+     * @return MongoDB\Database
      */
     public static function open($config = NULL) {
         $appMongoConfig = Application::getInstance()->getConfig( 'mongo' );
@@ -44,9 +46,10 @@ class MongoManager {
             $db = MongoManager::$_db;
         }
         else {
-            $mongo = new \MongoClient( "mongodb://{$config['host']}:{$config['port']}" );
+            $mongo = new Client( "mongodb://{$config['host']}:{$config['port']}" );
 //             $mongo = new \Mongo( "mongodb://{$config['host']}:{$config['port']}" );
-            $db = $mongo->$config ['db'];
+            $db = $config['db'];
+            $db = $mongo->$db;
             if( $config == $appMongoConfig ) {
                 MongoManager::$_db = $db;
             }
